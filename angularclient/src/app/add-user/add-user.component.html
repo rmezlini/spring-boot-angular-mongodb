@@ -1,0 +1,24 @@
+<div style="margin-left: 20px;">
+  <h2>Add User Detail</h2>
+  <div>
+    <p>
+		<label>Name:
+			<input [(ngModel)]="user.name" placeholder="User Name"/>
+		</label>
+    </p>
+	<p>
+		<label>Email:
+			<input [(ngModel)]="user.email" placeholder="User Email"/>
+		</label>
+    </p>
+	<p>
+		<label>Password:
+			<input type="password" [(ngModel)]="user.pwd" placeholder="User Password"/>
+		</label>
+    </p>
+  </div>
+	
+   		<button title="go back" (click)="goBack()" class="btn btn-info" style="margin-left: 20px;">Go Back</button>
+   		<button title="save" (click)="save()" class="btn btn-info" style="margin-left: 20px;">Save</button>
+
+</div>

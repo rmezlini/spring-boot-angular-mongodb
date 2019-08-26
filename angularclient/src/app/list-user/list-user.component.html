@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="card-body">
+<h2 style="margin: auto"> User Details</h2>
+<div>
+  <a routerLink="/add" class="btn btn-info" style="margin-bottom: 20px; margin-top: 20px; ">Add User</a>
+</div>
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th >Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td><a routerLink="/edit/{{user.id}}" class="btn btn-info">Edit</a>
+		<button title="delete user" (click)="delete(user)" class="btn btn-info" style="margin-left: 20px;">Delete</button></td>
+    </tr>
+    </tbody>
+
+</table>
+</div>
+</div>
+  
